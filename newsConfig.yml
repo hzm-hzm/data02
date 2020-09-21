@@ -1,0 +1,120 @@
+#捉取新闻网址######################
+#中国新闻网
+news:
+  china:
+    name: china
+    url: http://www.chinanews.com/
+    period: 2
+    describe: 中国新闻网
+  sina:
+    name: sina
+    url: https://news.sina.com.cn/
+    period: 2
+    describe: 新浪新闻网
+
+  people[0]:
+    name: society
+    describe: 社会新闻
+    url: http://society.people.com.cn
+    period: 1
+    sort: 1
+  people[1]:
+    name: world
+    describe: 国际新闻
+    url: http://world.people.com.cn
+    period: 1
+    sort: 2
+  people[2]:
+    name: politics
+    describe: 国内新闻
+    url: http://politics.people.com.cn
+    period: 1
+    sort: 3
+  people[3]:
+    name: finance
+    describe: 财经新闻
+    url: http://finance.people.com.cn
+    period: 1
+    sort: 4
+  people[4]:
+    name: sports
+    describe: 体育新闻
+    url: http://sports.people.com.cn
+    period: 1
+    sort: 5
+  people[5]:
+    name: hm
+    describe: 香港新闻
+    url: http://hm.people.com.cn
+    period: 1
+    sort:  6
+  people[6]:
+    name: culture
+    describe: 文化新闻
+    url: http://culture.people.com.cn
+    period: 1
+    sort: 7
+  people[7]:
+    name: tw
+    describe: 台湾新闻
+    url: http://tw.people.com.cn
+    period: 1
+    sort: 8
+  people[8]:
+    name: ent
+    describe: 娱乐新闻
+    url: http://ent.people.com.cn
+    period: 1
+    sort: 9
+  people[9]:
+    name: military
+    describe: 军事新闻
+    url: http://military.people.com.cn
+    period: 1
+    sort: 10
+
+
+
+
+redis:
+  news:
+    caches:
+      titlenewscache:
+        name: NewsTitle_
+        day: 1
+        describe: 是用来缓存新加入新闻的题目来在进行新闻挖掘时候的一个是否在库已存在的校验
+      sortnewscache:
+        name: SortNews
+        maxsize: 300
+        retain: 200
+        describe: 是按照分类缓存到不同的redis表中进行主页或类别页的展示
+      newnewscache:
+        name: NewNews
+        maxsize: 500
+        retain: 200
+        describe: 把最新的新闻放进去缓存
+      imagesnewscache:
+        name: NewsImage
+        maxsize: 200
+        describe: 各个种类含有图片的最新的一个新闻进行一个缓存
+      sortimagesnewcache:
+        name: SortNewsImage
+        maxsize: 200
+        describe: 各个种类含有图片的部分新闻进行一个缓存
+      hitsnewscache:
+        name: NewsHits
+        describe: 用来缓存新闻点击量的
+      newsortcache:
+        name: NewSort
+        describe: 用来缓存新闻的种类
+  user:
+    caches:
+      userinfocache:
+        name: UserInfo
+        time: 1
+
+
+
+
+
+
