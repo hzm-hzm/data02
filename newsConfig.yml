@@ -5,11 +5,13 @@ news:
     name: china
     url: http://www.chinanews.com/
     period: 2
+    sort:
     describe: 中国新闻网
   sina:
     name: sina
     url: https://news.sina.com.cn/
     period: 2
+    sort:
     describe: 新浪新闻网
 
   people[0]:
